@@ -1,36 +1,47 @@
 * {
-  /* box-sizing: border-box; */
+  box-sizing: border-box;
 }
 
-:focus {
-  /* TODO */
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  width: 100vw;
+  height: 100vh;
+  background-image: linear-gradient(to right, rgb(255, 200, 0), rgb(255, 98, 0))
 }
-
-body {}
 
 input {
-  /* TODO */
+  background: rgb(245, 184, 0);
+  height: 2em;
+  border: 1px solid black;
+  border-radius: 0;
+  padding-left: 10px;
+  text-align: center;
 }
 
 .search-container {
-  /* TODO */
-}
-
-.search-container input,
-.search-container .suggestions {
-  /* TODO */
+  position: relative;
+  width: 33%;
 }
 
 .search-container input {
-  /* TODO */
-}
-
-.search-container .suggestions {
-  /* TODO */
+  width: 100%;
 }
 
 ul {
+  position: absolute;
   list-style-type: none;
+  padding: 0;
+  margin: 1px 0 0 0;
+  width: 100%;
+  max-height: 200px;
+  overflow: auto;
+  /* border: 1px solid black; */
+  border-bottom: 1px solid black;
+  background: rgb(245, 184, 0);
 }
 
 ul.has-suggestions {
@@ -38,13 +49,33 @@ ul.has-suggestions {
 }
 
 ul li {
-  /* TODO */
+  position: relative;
+  padding: 0.25em 0 0.25em 10px;
+  text-align: center;
 }
 
 ul li:hover {
-  background: #0591AF;
+  background: rgb(255, 255, 0);
+  box-shadow: 1px 1px 10px white;
+  transition: all 0.5s;
 }
 
-input {
-  /* TODO */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgb(255, 130, 0);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(255, 255, 0);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+img {
+  width: 175px;
 }
